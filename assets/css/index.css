@@ -1,0 +1,153 @@
+/* HEADER */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    padding-right: 10vw;
+    background: var(--head-bg);
+}
+.header-text {
+    max-width: 600px;
+}
+header h1{
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+header p{
+    font-style: italic;
+    display: block;
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
+#newEntry{
+    height: 55px;
+    width: 250px;
+    margin: 25px;
+    border-radius: 15px;
+    border: none;
+    transition: font-size 0.5s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+#newEntry:hover{
+    background: var(--or);
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: rotaYes 0.5s linear infinite;
+    box-shadow: inset 0px 0px 5px  #00000096;
+}
+#newEntry:active{
+    font-size: 1.3rem;
+    animation: none;
+    box-shadow: none;
+    background: var(--ok);
+    transition: all 0.2s;
+}
+
+/* NOUVELLE SAISIE */
+.entry_dialog{
+    top: 15%;
+    left: 15%;
+    width: 500px;
+    border-radius: 20px;
+    z-index: 10;
+    padding: 10px 15px 25px 15px;
+    border: 5px double var(--bgSecond);
+}
+
+.entry_dialog:hover{
+    background: var(--ivoire);
+}
+
+.notif_error_input {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    background: red;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+}
+
+.notif_error_input.active {
+    max-height: 50px;
+    opacity: 1;
+    padding: 0.5rem 1rem;
+}
+
+.entry_dialog h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#matInput, #epaisseurInput {
+    display: block;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stock_input_dialog{
+display: grid;
+grid-column: 1fr 1fr;
+grid-row: 1fr 1fr;
+text-align: center;
+justify-content: center;
+margin-bottom: 1rem;
+}
+
+.stock_input_dialog label{
+    grid-row: 1;
+}
+
+#stockInput, #stockMiniInput{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    margin: auto;
+}
+
+.entry_dialog input{
+    border-radius: 5px;
+    border: 1px solid var(--texte-2);
+    height: 2rem;
+    width: 75%;
+    padding-left: 10px;
+    font-size: 1.1rem;
+}
+
+.actionsDialog{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+    align-content: center;
+}
+.actionsDialog button{
+    height: 2rem;
+    width: 200px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid var(--texte-2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+.actionsDialog button:hover{
+    transform: scale(1.1);
+    background: var(--or);
+    letter-spacing: 0.2rem;
+}
+.actionsDialog button:active{
+    transform: scale(1);
+    transition: 0;
+    background: var(--ok-bg);
+    letter-spacing: 0;
+}
