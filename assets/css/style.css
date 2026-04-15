@@ -5,18 +5,18 @@
     --fond-2:     #EDEAF4;  /* fond secondaire */
     --or:         #C9A96E;  /* accent chaud, prénoms */
     --texte:      #1C0F12;  /* texte principal */
-    --texte-2:    #6F7E86;  /* texte secondaire */
+    --texte-2:    rgb(111, 126, 134);  /* texte secondaire */
 
     --ok:      #2D6A4F; /* Texte Accepté */
-    --nok:     #9B2226; /* texte Refusé */
+    --nok:     hsla(32, 80%, 52%, 0.911); /* texte Refusé */
     --ok-bg:   #D8F3DC; /* BG Accepté */
-    --nok-bg:  #FFE5E5; /* BG Refusé */
+    --nok-bg:  rgb(250, 142, 70); /* BG Refusé */
 
     --ombre:      rgba(28, 15, 18, 0.10);
     --bg:         rgba(180, 155, 140, 0.315);
-    --head-bg:     hsla(261, 100%, 23%, 0.452);
-    --footer-bg:  hsla(213, 85%, 8%, 0.897);
-    --footer-lien: hsla(39, 46%, 61%, 0.61);
+    --head-bg:     rgba(41, 0, 117, 0.452);
+    --footer-bg:  rgba(3, 19, 38, 0.897);
+    --footer-lien: rgba(201, 169, 110, 0.61);
     --bgSecond: rgba(75, 73, 78, 0.53);
 
 /*  --violet:     #7c3aed;

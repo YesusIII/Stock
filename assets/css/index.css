@@ -108,7 +108,7 @@ margin-bottom: 1rem;
 
 #stockInput, #stockMiniInput{
     margin: 0;
-    padding: 0;
+    padding: 15px;
     width: 50%;
     margin: auto;
 }
@@ -150,4 +150,68 @@ margin-bottom: 1rem;
     transition: 0;
     background: var(--ok-bg);
     letter-spacing: 0;
+}
+.entry_dialog p{
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Tableau :  */
+.contenair_table {
+    padding: 1rem 2rem;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    font-size: 0.9rem;
+}
+thead tr {
+    background: var(--head-bg);
+    color: var(--ivoire);
+}
+th {
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    width: 40%;
+}
+th:nth-child(n+2){
+    width: 20%;
+}
+td {
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--ombre);
+}
+td.miniActive {
+    background: var(--nok-bg);
+}
+tbody tr:nth-child(even) {
+    background: var(--bgSecond);
+}
+tbody tr:hover {
+    background: var(--fond-2);
+    transition: background 0.2s ease;
+}
+
+/* Resumé / Totaux */
+.totalMat {
+    display: block;
+    padding: 1.5rem 2rem;
+}
+
+.totalMat p {
+    font-size: 0.85rem;
+    color: var(--texte-2);
+    margin-bottom: 0.5rem;
+}
+
+.totalMat span {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Arial", serif;
+    color: var(--texte);
 }

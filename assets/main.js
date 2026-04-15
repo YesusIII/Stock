@@ -18,6 +18,7 @@ const btnCancel = document.getElementById('btnCancel')
 
 //Main :
 const contenairTable = document.getElementById('contenairTable')
+const totalMatView = document.getElementById('totalMatView')
 //Footer :
 const InfoVersion = document.getElementById ('infoVersion')
 //const versionlog = document.getElementByID ('versionlog')
@@ -48,7 +49,7 @@ btnOk.addEventListener('click', () =>{
     const epaisseurInputVal = parseFloat(epaisseurInput.value) || 0
     const stockInputVal = parseFloat(stockInput.value) || 0
     const stockMiniInputVal = parseFloat(stockMiniInput.value) || 0
-   
+    
     //Declaration de mes objets
     const nouvellematiere = {
             id : Date.now(),
@@ -59,8 +60,10 @@ btnOk.addEventListener('click', () =>{
             }
     //push de mes objets dans mon array (let declaré en top)    
     matiereSaisie.push(nouvellematiere)
+    //Envoi de la longueur de l'array dans le span total des Matieres
+    totalMatView.textContent = matiereSaisie.length
     //Console.log pour check le comportement des objets dans mon array
-        console.log(matiereSaisie)
+    console.log(matiereSaisie)
 
     //Execution des scripts
     viewTable()
@@ -109,7 +112,9 @@ function viewTable (){
         createTdStock.textContent = dataCell.stock
         const createTdStockMini = document.createElement('td')
         createTdStockMini.textContent = dataCell.stockmini
-
+        //Comparaison du Stock Reel - Stock Mini
+            if (dataCell.stock <= dataCell.stockmini) 
+                {createTdStock.classList.add('miniActive')}
         //j'ajoute les Cells et Row (td*4 -> tr)
         createDataRow.appendChild(createTdMatiere)
         createDataRow.appendChild(createTdEpaisseur)
