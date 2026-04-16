@@ -24,7 +24,7 @@
     <form method="dialog">
         <div id="notif_Input_Error" class="notif_error_input">
         </div>
-        <h2>Nouvelle Saisie :</h2> <!-- <p>⚙️</p> -->
+        <h2 id="titleDialog">Nouvelle Saisie :</h2> <!-- <p>⚙️</p> -->
         <label for="matInput">Matière*</label><input id="matInput" type="text">
         <label for="epaisseurInput">Epaisseur*</label><input id="epaisseurInput" type="number" step="0.05">
 
@@ -32,7 +32,7 @@
             <label for="stockInput">Stock Actuel*</label><input id="stockInput" type="number" step="1">
             <label for="stockMiniInput">Seuil d'alerte*</label><input id="stockMiniInput" type="number" step="1">
         </div>
-        <p>* : Champs obligatoires</p>
+        <p class="adv_required_input">* : Champs obligatoires</p>
         <div class="actionsDialog">
             <button type="button" id="btnOk">Confirmer</button>
             <button type="button" id="btnCancel">Annuler</button>
@@ -40,13 +40,37 @@
     
     </form>
 </dialog>
+<dialog id="dialogStockUpdate" class="dialog_update">
+    <div id="notif_Update_Input_Error" class="notif_error_input">
+    </div>
+    <h2>Mise à jour du Stock</h2>
+    <div class="stock_update_values">
+        <p>Matière : <span id="stockUpdateMat">Test</span></p>
+        <p>Epaisseur : <span id="stockUpdateEpaisseur">1.00</span></p>
+        <p class="stock_update_p">Stock Actuel : <span id="stockUpdate"></span></p>
+        <p>Seuil d'Alerte : <span id="stockUpdateMini">Test</span></p>
+    </div>
+    <div class="stock_update_input">
+        <label for="stockUpdateInput">Valeur à <span id="addReduceSpan"></span></label><input id="stockUpdateInput" type="number" step="1">
+    </div>
+    <div class="Add_by_number">
+        <button id="addFive">+5</button>
+        <button id="addTen">+10</button>
+        <button id="addAll">All</button>
+    </div>
+    <div class="action_dialog_update_stock">
+        <button id="stockUpdateSubmit">OK</button>
+        <button id="stockUpdateCancel">Annuler</button>
+    </div>
+</dialog>
+
     <!-- MAIN -->
  <main>
 <section id="contenairTable" class="contenair_table">
 
 </section>
 <section class="totalMat">
-<p> Nombre de Matières enregistrées : <span id="totalMatView"></span></p>
+<p> Nombre de Matières enregistrées : <span id="totalMatView">0</span></p>
 </section>
  </main>
     <!-- FOOTER  -->
